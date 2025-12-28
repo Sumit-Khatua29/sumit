@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Download, Mail, Github, Linkedin, ArrowRight } from 'lucide-react';
+import { ChevronDown, Download, Mail, Github, Linkedin, ArrowRight, Code, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -66,74 +66,97 @@ const Hero = () => {
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
 
-      <div className="relative z-10 container mx-auto px-6 text-center">
-        {/* Main Content */}
-        <div className={`transition-all duration-1000 transform ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
+        {/* Left Column - Text Content */}
+        <div className="text-left animate-fade-in-up order-2 lg:order-1 pt-10 lg:pt-0">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50 mb-6 backdrop-blur-sm animate-fade-in-down shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50 mb-8 backdrop-blur-sm animate-fade-in-down shadow-sm hover:scale-105 transition-transform cursor-default w-fit">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
             <span className="text-sm text-slate-600 dark:text-slate-300 font-medium">Available for Hire</span>
           </div>
 
-          {/* Greeting & Name */}
-          <div className="mb-4 space-y-2">
-            <p className="text-blue-600 dark:text-blue-400 text-lg md:text-xl font-medium tracking-wide animate-fade-in">Currently building things for the web</p>
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold text-slate-900 dark:text-white tracking-tight leading-none">
-              Sumit
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 dark:from-blue-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent ml-4">
-                Khatua
-              </span>
-            </h1>
-          </div>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+            <span className="text-slate-900 dark:text-white block mb-2">Hi, I'm</span>
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 dark:from-blue-400 dark:via-purple-400 dark:to-blue-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+              Sumit Khatua
+            </span>
+          </h1>
 
-          {/* Typing Animation */}
-          <div className="mb-8 h-12 flex items-center justify-center">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-light text-slate-600 dark:text-slate-300">
-              I am a <span className="font-semibold text-blue-600 dark:text-blue-400">{text}</span>
+          <div className="text-2xl md:text-3xl text-slate-600 dark:text-slate-300 mb-8 font-light flex items-center gap-3 flex-wrap">
+            <span>I build</span>
+            <span className="font-semibold text-blue-600 dark:text-blue-400 min-w-[280px]">
+              <span className="font-semibold text-blue-600 dark:text-blue-400">{text}</span>
               <span className="animate-pulse text-blue-400 ml-1">|</span>
-            </div>
+            </span>
           </div>
 
-          {/* Description */}
-          <div className={`mb-8 max-w-2xl mx-auto transition-all duration-1000 delay-300 transform ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <p className="text-lg text-slate-400 leading-relaxed">
-              Passionate about crafting efficient, scalable solutions with modern technologies. 
-              Turning complex problems into elegant, user-centric experiences.
-            </p>
-          </div>
+          <p className="text-slate-600 dark:text-slate-400 text-lg max-w-xl leading-relaxed mb-10">
+            Transforming complex problems into elegant, efficient, and scalable web solutions. 
+            Passionate about coding, innovation, and continuous learning.
+          </p>
 
-          {/* Action Buttons */}
-          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-500 transform ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <button
+          <div className="flex flex-wrap gap-4">
+            <button 
               onClick={() => scrollToSection('projects')}
-              className="group relative px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-medium transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40 flex items-center gap-2 overflow-hidden"
+              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-2"
             >
-              <span className="relative z-10">View Projects</span>
-              <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              View Projects <ArrowRight size={20} />
             </button>
-            
-            <a
+            <a 
               href="/SUMIT RESUME.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-8 py-3.5 bg-white/50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 hover:border-blue-400 dark:hover:border-slate-500 rounded-full font-medium transition-all duration-300 backdrop-blur-sm shadow-sm hover:shadow-md"
+              className="px-8 py-4 bg-white/50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 rounded-full font-semibold hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 hover:scale-105 backdrop-blur-sm flex items-center gap-2 hover:text-blue-600 dark:hover:text-white"
             >
-              <Download className="w-4 h-4" />
-              <span>View Resume</span>
+              <Download size={20} /> Resume
             </a>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div 
-          className="mt-16 cursor-pointer group transition-all duration-1000 delay-700"
-          onClick={() => scrollToSection('about')}
-        >
-          <div className="flex flex-col items-center animate-bounce-slow">
-            <span className="text-sm text-slate-500 mb-2 font-medium tracking-wide group-hover:text-blue-400 transition-colors duration-300">Scroll Down</span>
-            <ChevronDown size={24} className="text-slate-500 group-hover:text-blue-400 transition-colors duration-300" />
-          </div>
+        {/* Right Column - Photo */}
+        <div className="relative flex justify-center lg:justify-end animate-fade-in-up delay-200 order-1 lg:order-2">
+            {/* Value Props Floating Cards */}
+            <div className="absolute top-10 left-0 lg:-left-10 z-20 animate-float" style={{ animationDelay: '0s' }}>
+                <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md p-4 rounded-2xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center gap-3 hover:-translate-y-1 transition-transform cursor-default">
+                    <div className="p-2 bg-blue-500/10 rounded-lg">
+                        <Code className="w-6 h-6 text-blue-500" />
+                    </div>
+                    <div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Clean Code</p>
+                        <p className="text-sm font-bold text-slate-800 dark:text-white">Architecture</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="absolute bottom-10 right-0 lg:-right-4 z-20 animate-float" style={{ animationDelay: '2s' }}>
+                <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md p-4 rounded-2xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center gap-3 hover:-translate-y-1 transition-transform cursor-default">
+                    <div className="p-2 bg-purple-500/10 rounded-lg">
+                        <Sparkles className="w-6 h-6 text-purple-500" />
+                    </div>
+                    <div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Modern UI</p>
+                        <p className="text-sm font-bold text-slate-800 dark:text-white">Experience</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Main Image Container */}
+            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px]">
+                {/* Glowing Backdrop */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/30 to-purple-500/30 rounded-full blur-[60px] animate-pulse"></div>
+                
+                {/* Image Wrapper with Glass Border */}
+                <div className="relative w-full h-full rounded-full border-4 border-white/20 dark:border-white/10 backdrop-blur-sm p-3 animate-float">
+                    <div className="w-full h-full rounded-full overflow-hidden border border-slate-200 dark:border-slate-700 shadow-2xl relative">
+                         <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-transparent z-10"></div>
+                        <img 
+                            src="/Professional image.png" 
+                            alt="Sumit Khatua" 
+                            className="w-full h-full object-cover object-[center_15%] transform hover:scale-105 transition-transform duration-700"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
 
