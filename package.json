@@ -1,8 +1,9 @@
 {
-  "name": "Sumit-portfolio",
+  "name": "sumit-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Sumit-Khatua29.github.io/sumit",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
