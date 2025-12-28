@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, Calendar, Building, CheckCircle, ExternalLink, Shield } from 'lucide-react';
+import SpotlightCard from './SpotlightCard';
 
 const Certifications = () => {
   const certifications = [
@@ -86,14 +87,14 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="min-h-screen bg-slate-950 py-24 px-4 relative overflow-hidden">
+    <section id="certifications" className="min-h-screen bg-slate-900 py-24 px-4 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-20 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-slate-900/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-800 mb-6">
+          <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-800 mb-6">
             <Award className="w-5 h-5 text-blue-400" />
             <span className="text-slate-300 font-medium text-sm">Achievements</span>
           </div>
@@ -108,9 +109,9 @@ const Certifications = () => {
         {/* Certifications Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
           {certifications.map((cert, index) => (
-            <div
+            <SpotlightCard
               key={index}
-              className="group relative bg-slate-900/40 backdrop-blur-md rounded-2xl border border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/5 hover:-translate-y-1 overflow-hidden"
+              className="hover:shadow-2xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300"
             >
               {/* Status Bar */}
               <div className={`h-1 w-full bg-gradient-to-r ${cert.status === 'Completed' ? 'from-emerald-500 to-green-400' : 'from-yellow-500 to-orange-400'}`}></div>
@@ -166,7 +167,7 @@ const Certifications = () => {
                     {cert.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-1 bg-slate-800/50 text-slate-300 rounded-lg text-sm font-medium border border-slate-700/50 group-hover:border-slate-600 transition-colors"
+                        className="px-3 py-1 bg-slate-800/50 text-slate-300 rounded-lg text-sm font-medium border border-white/5 group-hover:border-slate-600 transition-colors"
                       >
                         {skill}
                       </span>
@@ -186,7 +187,7 @@ const Certifications = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
 

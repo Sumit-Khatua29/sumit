@@ -63,14 +63,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="min-h-screen bg-slate-950 py-24 px-4 relative">
+    <section id="contact" className="min-h-screen bg-slate-900 py-24 px-4 relative">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-20 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-slate-900/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-800 mb-6">
+          <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-800 mb-6">
             <MessageSquare className="w-5 h-5 text-blue-400" />
             <span className="text-slate-300 font-medium text-sm">Let's Connect</span>
           </div>
@@ -96,7 +96,7 @@ const Contact = () => {
               {contactInfo.map((contact, index) => (
                 <div
                   key={index}
-                  className="group bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-blue-500/30 p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-blue-500/30 p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 >
                   <div className="bg-slate-800 w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors duration-300">
                     {contact.icon}
@@ -128,7 +128,7 @@ const Contact = () => {
           </div>
           
           {/* Contact Form */}
-          <div className="bg-slate-900/80 backdrop-blur-md rounded-3xl border border-slate-800 p-8 md:p-10 hover:border-slate-700 transition-all duration-300 shadow-2xl">
+          <div className="bg-slate-800/80 backdrop-blur-md rounded-3xl border border-slate-800 p-8 md:p-10 hover:border-slate-700 transition-all duration-300 shadow-2xl">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-white mb-2">Send a Message</h3>
               <p className="text-slate-400">I'll get back to you as soon as possible.</p>
@@ -149,7 +149,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-12 pr-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-xl pl-12 pr-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -167,7 +167,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-12 pr-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-xl pl-12 pr-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -185,7 +185,7 @@ const Contact = () => {
                     placeholder="Project Inquiry"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-12 pr-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200"
+                    className="w-full bg-slate-900 border border-slate-800 rounded-xl pl-12 pr-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200"
                   />
                 </div>
               </div>

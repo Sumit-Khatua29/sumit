@@ -16,7 +16,7 @@ const App = () => {
   const activeSection = useScrollSpy(sections);
 
   return (
-    <div className="bg-slate-950 text-slate-200 selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="bg-slate-900 text-slate-200 selection:bg-cyan-500/30 selection:text-cyan-200">
       <Header activeSection={activeSection} />
       <Hero />
       <About />

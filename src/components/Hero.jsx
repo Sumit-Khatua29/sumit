@@ -117,7 +117,7 @@ const Hero = () => {
               href="/SUMIT RESUME.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-8 py-3.5 bg-slate-900/50 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 rounded-full font-medium transition-all duration-300 backdrop-blur-sm"
+              className="flex items-center gap-2 px-8 py-3.5 bg-slate-800/50 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 rounded-full font-medium transition-all duration-300 backdrop-blur-sm"
             >
               <Download className="w-4 h-4" />
               <span>View Resume</span>

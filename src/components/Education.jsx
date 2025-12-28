@@ -1,4 +1,5 @@
 import { Award, GraduationCap, Calendar, MapPin, BookOpen, ArrowRight } from 'lucide-react';
+import SpotlightCard from './SpotlightCard';
 
 const Education = () => {
   const education = [
@@ -39,14 +40,14 @@ const Education = () => {
   };
 
   return (
-    <section id="education" className="min-h-screen bg-slate-950 py-24 px-4 relative overflow-hidden">
+    <section id="education" className="min-h-screen bg-slate-900 py-24 px-4 relative overflow-hidden">
       {/* Subtle Background */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-20 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-slate-900/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-800 mb-6">
+          <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-800 mb-6">
             <BookOpen className="w-5 h-5 text-blue-400" />
             <span className="text-slate-300 font-medium text-sm">Academic Journey</span>
           </div>
@@ -74,7 +75,7 @@ const Education = () => {
                   <div className="w-4 h-4 rounded-full bg-slate-800 border-4 border-slate-950 group-hover:bg-blue-500 group-hover:scale-125 transition-all duration-500 z-10 shadow-xl shadow-slate-950"></div>
                 </div>
 
-                <div className="relative bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-blue-500/30 p-8 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/5 hover:-translate-y-1">
+                <SpotlightCard className="p-8 hover:shadow-lg hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300">
                   
                   {/* Content Layout */}
                   <div className="flex flex-col md:flex-row gap-6">
@@ -128,7 +129,7 @@ const Education = () => {
                           {edu.skills.map((skill, skillIndex) => (
                             <span
                               key={skillIndex}
-                              className="px-3 py-1 bg-slate-800 text-slate-300 rounded-lg text-xs font-medium border border-slate-700 hover:border-slate-600 transition-colors"
+                              className="px-3 py-1 bg-slate-800/50 text-slate-300 rounded-lg text-xs font-medium border border-white/5 hover:border-slate-600 transition-colors"
                             >
                               {skill}
                             </span>
@@ -137,7 +138,7 @@ const Education = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </SpotlightCard>
               </div>
             ))}
           </div>

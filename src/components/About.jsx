@@ -3,7 +3,7 @@ import { GraduationCap, MapPin, Code, Trophy, User, ArrowRight } from 'lucide-re
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center bg-slate-950 relative overflow-hidden py-20">
+    <section id="about" className="min-h-screen flex items-center bg-slate-900 relative overflow-hidden py-20">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-10 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px]"></div>
@@ -13,7 +13,7 @@ const About = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-slate-900/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-800 mb-6">
+          <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-800 mb-6">
             <User className="w-5 h-5 text-blue-400" />
             <span className="text-slate-300 font-medium text-sm">Personal Profile</span>
           </div>
@@ -49,7 +49,7 @@ const About = () => {
 
             {/* Education & Location Cards */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="group bg-slate-900/40 backdrop-blur-sm border border-slate-800 p-6 rounded-2xl hover:border-blue-500/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="group bg-slate-800/40 backdrop-blur-sm border border-slate-800 p-6 rounded-2xl hover:border-blue-500/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 transition-colors">
                     <GraduationCap size={24} className="text-blue-400" />
@@ -66,7 +66,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="group bg-slate-900/40 backdrop-blur-sm border border-slate-800 p-6 rounded-2xl hover:border-blue-500/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="group bg-slate-800/40 backdrop-blur-sm border border-slate-800 p-6 rounded-2xl hover:border-blue-500/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 transition-colors">
                     <MapPin size={24} className="text-blue-400" />
@@ -86,7 +86,7 @@ const About = () => {
 
           {/* Right Content - Stats */}
           <div className="lg:col-span-5">
-            <div className="bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 rounded-[2.5rem] relative overflow-hidden shadow-2xl">
+            <div className="bg-slate-800/50 backdrop-blur-md border border-slate-800 p-8 rounded-[2.5rem] relative overflow-hidden shadow-2xl">
               {/* Decorative gradient blob */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none"></div>
 
@@ -102,7 +102,7 @@ const About = () => {
                   { icon: GraduationCap, value: '5+', label: 'Certifications', color: 'text-emerald-400' },
                   { icon: null, value: '100%', label: 'Dedication', color: 'text-orange-400', special: '💯' }
                 ].map((stat, index) => (
-                  <div key={index} className="text-center group bg-slate-950/30 rounded-2xl p-4 border border-slate-800 hover:border-slate-700 transition-all hover:-translate-y-1">
+                  <div key={index} className="text-center group bg-slate-900/30 rounded-2xl p-4 border border-slate-800 hover:border-slate-700 transition-all hover:-translate-y-1">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-slate-800 rounded-xl mb-3 group-hover:scale-110 transition-transform shadow-lg">
                       {stat.icon ? (
                         <stat.icon size={20} className={stat.color} />

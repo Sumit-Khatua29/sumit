@@ -1,7 +1,9 @@
 import React from 'react';
 import { ExternalLink, Calendar, Code, Zap, ArrowUpRight } from 'lucide-react';
+import SpotlightCard from './SpotlightCard';
 
 const Projects = () => {
+
   const projects = [
     {
       title: 'YouTube Video Downloader',
@@ -34,7 +36,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen bg-slate-950 py-24 px-4 relative overflow-hidden">
+    <section id="projects" className="min-h-screen bg-slate-900 py-24 px-4 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-500/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -42,14 +44,14 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-20 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-slate-900/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-800 mb-6">
+          <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 mb-6 shadow-xl shadow-blue-500/10">
             <Code className="w-5 h-5 text-blue-400" />
-            <span className="text-slate-300 font-medium text-sm">Portfolio</span>
+            <span className="text-slate-300 font-medium text-sm tracking-wide">Featured Projects</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-            Featured <span className="text-blue-500">Projects</span>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight font-display">
+            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Work</span>
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">
             Showcasing innovative solutions and technical expertise across various domains
           </p>
         </div>
@@ -57,10 +59,7 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative bg-slate-900/50 backdrop-blur-md rounded-3xl border border-slate-800/60 hover:border-blue-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 overflow-visible"
-            >
+            <SpotlightCard key={index} className="hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 transition-all duration-500">
               <div className="p-8 md:p-10 h-full flex flex-col">
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -82,14 +81,14 @@ const Projects = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-slate-400 text-lg leading-relaxed mb-8">
+                <p className="text-slate-400 text-lg leading-relaxed mb-8 font-light">
                   {project.description}
                 </p>
 
                 {/* Features */}
                 <div className="mb-8 flex-grow">
-                  <h4 className="flex items-center gap-2 font-semibold text-slate-200 mb-4">
-                    <Zap className="w-4 h-4 text-yellow-500" />
+                  <h4 className="flex items-center gap-2 font-semibold text-slate-200 mb-4 text-sm uppercase tracking-wider">
+                    <Zap className="w-4 h-4 text-amber-400" />
                     Key Features
                   </h4>
                   <ul className="grid sm:grid-cols-2 gap-3">
@@ -106,12 +105,12 @@ const Projects = () => {
                 </div>
 
                 {/* Footer: Tech & Date */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t border-slate-800/50">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t border-white/5">
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-slate-800 text-slate-300 rounded-lg text-sm font-medium border border-slate-700/50"
+                        className="px-3 py-1 bg-slate-800/50 text-slate-300 rounded-lg text-sm font-medium border border-white/5 hover:bg-slate-700/50 transition-colors"
                       >
                         {tech}
                       </span>
@@ -123,13 +122,13 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <div className="inline-flex items-center gap-3 bg-slate-900 border border-slate-800 p-2 pr-6 rounded-full hover:border-slate-600 transition-all duration-300 group cursor-pointer">
+          <div className="inline-flex items-center gap-3 bg-slate-900 border border-white/10 p-2 pr-6 rounded-full hover:border-white/20 transition-all duration-300 group cursor-pointer shadow-lg">
             <span className="bg-blue-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">New</span>
             <span className="text-slate-300 font-medium group-hover:text-white transition-colors">Interested in more? Check my GitHub</span>
             <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
