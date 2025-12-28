@@ -128,11 +128,16 @@ const Projects = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <div className="inline-flex items-center gap-3 bg-slate-900 border border-white/10 p-2 pr-6 rounded-full hover:border-white/20 transition-all duration-300 group cursor-pointer shadow-lg">
+          <a 
+            href="https://github.com/Sumit-Khatua29" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-slate-900 border border-white/10 p-2 pr-6 rounded-full hover:border-white/20 transition-all duration-300 group cursor-pointer shadow-lg hover:-translate-y-1"
+          >
             <span className="bg-blue-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">New</span>
             <span className="text-slate-300 font-medium group-hover:text-white transition-colors">Interested in more? Check my GitHub</span>
             <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
-          </div>
+          </a>
         </div>
       </div>
     </section>
