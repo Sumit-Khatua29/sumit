@@ -39,15 +39,15 @@ const Navbar = ({ activeSection, isMenuOpen, setIsMenuOpen, isMobile = false }) 
     if (!isMenuOpen) return null;
     
     return (
-      <div className="space-y-2 p-4">
+      <div className="space-y-2 p-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-b border-gray-200 dark:border-slate-800 shadow-xl">
         {navItems.map((item, index) => (
           <button
             key={item.id}
             onClick={() => scrollToSection(item.id)}
             className={`w-full text-left py-3 px-4 rounded-lg transition-all duration-300 ${
               activeSection === item.id 
-                ? 'text-blue-400 bg-blue-500/10 border-l-2 border-blue-400' 
-                : 'text-gray-300 hover:text-gray-100 hover:bg-gray-800/50'
+                ? 'text-blue-500 dark:text-blue-400 bg-blue-500/10 border-l-2 border-blue-500 dark:border-blue-400' 
+                : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800/50'
             }`}
             style={{ 
               animationDelay: `${index * 50}ms`,
@@ -66,7 +66,7 @@ const Navbar = ({ activeSection, isMenuOpen, setIsMenuOpen, isMobile = false }) 
 
   // Desktop Navigation - Clean & Minimal
   return (
-    <nav className="hidden md:flex items-center space-x-1 bg-slate-900/50 backdrop-blur-md rounded-full px-2 py-2 border border-slate-800/50 shadow-lg shadow-blue-500/5">
+    <nav className="hidden md:flex items-center space-x-1 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md rounded-full px-2 py-2 border border-black/5 dark:border-slate-800/50 shadow-lg shadow-gray-200/50 dark:shadow-blue-500/5">
       {navItems.map((item, index) => (
         <button
           key={item.id}
@@ -74,7 +74,7 @@ const Navbar = ({ activeSection, isMenuOpen, setIsMenuOpen, isMobile = false }) 
           className={`relative px-5 py-2.5 rounded-full transition-all duration-300 group overflow-hidden ${
             activeSection === item.id 
               ? 'text-white shadow-md bg-blue-600/90' 
-              : 'text-slate-400 hover:text-slate-100'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
           }`}
           style={{
             animation: `fadeIn 0.4s ease-out ${index * 80}ms both`
@@ -82,7 +82,7 @@ const Navbar = ({ activeSection, isMenuOpen, setIsMenuOpen, isMobile = false }) 
         >
           {/* Subtle hover background for non-active items */}
           {activeSection !== item.id && (
-            <div className="absolute inset-0 bg-slate-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            <div className="absolute inset-0 bg-gray-200/50 dark:bg-slate-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
           )}
           
           <div className="relative flex items-center space-x-2 z-10">

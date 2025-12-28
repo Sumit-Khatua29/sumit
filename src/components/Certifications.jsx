@@ -87,21 +87,21 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="min-h-screen bg-slate-900 py-24 px-4 relative overflow-hidden">
+    <section id="certifications" className="min-h-screen bg-slate-200 dark:bg-slate-900 py-24 px-4 relative overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-20 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-800 mb-6">
-            <Award className="w-5 h-5 text-blue-400" />
-            <span className="text-slate-300 font-medium text-sm">Achievements</span>
+          <div className="inline-flex items-center gap-2 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200 dark:border-slate-800 mb-6">
+            <Award className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <span className="text-slate-600 dark:text-slate-300 font-medium text-sm">Achievements</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-            Certifications & <span className="text-blue-500">Awards</span>
+          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
+            Certifications & <span className="text-blue-600 dark:text-blue-500">Awards</span>
           </h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             Continuous learning and professional development across multiple domains
           </p>
         </div>
@@ -120,22 +120,22 @@ const Certifications = () => {
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-start gap-5">
-                    <div className="bg-slate-800/80 p-3.5 rounded-xl group-hover:bg-blue-500/10 group-hover:text-blue-400 transition-colors duration-300">
-                      <Shield className="w-7 h-7 text-slate-300 group-hover:text-blue-400" />
+                    <div className="bg-slate-300 dark:bg-slate-800/80 p-3.5 rounded-xl group-hover:bg-blue-600/10 dark:group-hover:bg-blue-500/10 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                      <Shield className="w-7 h-7 text-slate-500 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400" />
                     </div>
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center gap-3 mb-2">
-                        <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                           {cert.title}
                         </h3>
                       </div>
-                      <p className="text-slate-400 font-semibold text-lg flex items-center gap-2">
+                      <p className="text-slate-600 dark:text-slate-400 font-semibold text-lg flex items-center gap-2">
                         {cert.provider}
-                        <span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-700"></span>
                         <span className={`text-sm px-2 py-0.5 rounded-full border ${
                           cert.status === 'Completed' 
-                            ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' 
-                            : 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20'
+                            ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20' 
+                            : 'bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20'
                         }`}>
                           {cert.status}
                         </span>
@@ -145,7 +145,7 @@ const Certifications = () => {
                   
                   <a
                     href={cert.link}
-                    className="flex-shrink-0 flex items-center justify-center p-2.5 rounded-lg border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800 hover:border-slate-700 transition-all"
+                    className="flex-shrink-0 flex items-center justify-center p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-all"
                     aria-label={`View ${cert.title} certificate`}
                   >
                     <ExternalLink className="w-5 h-5" />
@@ -153,7 +153,7 @@ const Certifications = () => {
                 </div>
                 
                 {/* Description */}
-                <p className="text-slate-400 text-lg leading-relaxed mb-8 border-b border-slate-800/50 pb-6">
+                <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8 border-b border-slate-200 dark:border-slate-800/50 pb-6">
                   {cert.description}
                 </p>
 
@@ -167,7 +167,7 @@ const Certifications = () => {
                     {cert.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-1 bg-slate-800/50 text-slate-300 rounded-lg text-sm font-medium border border-white/5 group-hover:border-slate-600 transition-colors"
+                        className="px-3 py-1 bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-300 rounded-lg text-sm font-medium border border-slate-200 dark:border-white/5 group-hover:border-slate-300 dark:group-hover:border-slate-600 transition-colors"
                       >
                         {skill}
                       </span>
@@ -199,7 +199,7 @@ const Certifications = () => {
             { label: 'Skills Gained', value: '20+', color: 'text-purple-400' },
             { label: 'Latest Year', value: '2026', color: 'text-orange-400' }
           ].map((stat, i) => (
-            <div key={i} className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 text-center border border-slate-800 hover:border-slate-700 transition-colors">
+            <div key={i} className="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 text-center border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors shadow-sm">
               <div className={`text-4xl font-bold mb-2 ${stat.color}`}>{stat.value}</div>
               <div className="text-slate-500 text-sm font-medium uppercase tracking-wider">{stat.label}</div>
             </div>

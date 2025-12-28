@@ -55,7 +55,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 pt-32 pb-16">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-200 dark:bg-slate-950 pt-32 pb-16 transition-colors duration-300">
       {/* Aurora Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px] animate-pulse"></div>
@@ -70,17 +70,17 @@ const Hero = () => {
         {/* Main Content */}
         <div className={`transition-all duration-1000 transform ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-700/50 mb-6 backdrop-blur-sm animate-fade-in-down">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50 mb-6 backdrop-blur-sm animate-fade-in-down shadow-sm">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span className="text-sm text-slate-300 font-medium">Available for Hire</span>
+            <span className="text-sm text-slate-600 dark:text-slate-300 font-medium">Available for Hire</span>
           </div>
 
           {/* Greeting & Name */}
           <div className="mb-4 space-y-2">
-            <p className="text-blue-400 text-lg md:text-xl font-medium tracking-wide animate-fade-in">Currently building things for the web</p>
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-none">
+            <p className="text-blue-600 dark:text-blue-400 text-lg md:text-xl font-medium tracking-wide animate-fade-in">Currently building things for the web</p>
+            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold text-slate-900 dark:text-white tracking-tight leading-none">
               Sumit
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent ml-4">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 dark:from-blue-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent ml-4">
                 Khatua
               </span>
             </h1>
@@ -88,8 +88,8 @@ const Hero = () => {
 
           {/* Typing Animation */}
           <div className="mb-8 h-12 flex items-center justify-center">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-light text-slate-300">
-              I am a <span className="font-semibold text-blue-400">{text}</span>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-light text-slate-600 dark:text-slate-300">
+              I am a <span className="font-semibold text-blue-600 dark:text-blue-400">{text}</span>
               <span className="animate-pulse text-blue-400 ml-1">|</span>
             </div>
           </div>
@@ -117,7 +117,7 @@ const Hero = () => {
               href="/SUMIT RESUME.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-8 py-3.5 bg-slate-800/50 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 rounded-full font-medium transition-all duration-300 backdrop-blur-sm"
+              className="flex items-center gap-2 px-8 py-3.5 bg-white/50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white border border-slate-200 dark:border-slate-700 hover:border-blue-400 dark:hover:border-slate-500 rounded-full font-medium transition-all duration-300 backdrop-blur-sm shadow-sm hover:shadow-md"
             >
               <Download className="w-4 h-4" />
               <span>View Resume</span>

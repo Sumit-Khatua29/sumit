@@ -63,7 +63,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 relative overflow-hidden">
+    <section id="skills" className="min-h-screen flex items-center bg-slate-200 dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
@@ -75,14 +75,14 @@ const Skills = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-3 mb-6">
-            <Zap className="text-blue-400 w-6 h-6" />
-            <span className="text-blue-400 font-medium text-lg">Technical Expertise</span>
-            <Zap className="text-blue-400 w-6 h-6" />
+            <Zap className="text-blue-600 dark:text-blue-400 w-6 h-6" />
+            <span className="text-blue-600 dark:text-blue-400 font-medium text-lg">Technical Expertise</span>
+            <Zap className="text-blue-600 dark:text-blue-400 w-6 h-6" />
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-            Skills & <span className="text-blue-400">Technologies</span>
+          <h2 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-8">
+            Skills & <span className="text-blue-600 dark:text-blue-400">Technologies</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-slate-600 dark:text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
             A comprehensive toolkit of modern technologies and programming languages that I use to build robust, scalable applications
           </p>
         </div>
@@ -92,7 +92,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className={`group relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-8 hover:border-transparent transition-all duration-500 transform hover:scale-105 hover:shadow-2xl ${
+              className={`group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-slate-200 dark:border-gray-700/50 rounded-3xl p-8 hover:border-transparent transition-all duration-500 transform hover:scale-105 hover:shadow-2xl ${
                 hoveredCard === index ? 'shadow-2xl' : ''
               }`}
               onMouseEnter={() => setHoveredCard(index)}
@@ -103,18 +103,18 @@ const Skills = () => {
             >
               {/* Gradient Border on Hover */}
               <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${category.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm`}></div>
-              <div className="relative bg-gray-800/90 rounded-3xl p-8 -m-2">
+              <div className="relative bg-white/90 dark:bg-gray-800/90 rounded-3xl p-8 -m-2">
                 
                 {/* Category Header */}
                 <div className="text-center mb-8">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${category.gradient} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="w-full h-full bg-gray-800 rounded-2xl flex items-center justify-center">
-                      <div className="text-white group-hover:animate-pulse">
+                    <div className="w-full h-full bg-slate-50 dark:bg-gray-800 rounded-2xl flex items-center justify-center">
+                      <div className="text-slate-700 dark:text-white group-hover:animate-pulse">
                         {category.icon}
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {category.title}
                   </h3>
                 </div>
@@ -124,16 +124,16 @@ const Skills = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex} className="space-y-2">
                       <div className="flex justify-between items-center">
-                        <span className="text-gray-300 text-sm font-medium">
+                        <span className="text-slate-700 dark:text-gray-300 text-sm font-medium">
                           {skill.name}
                         </span>
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-slate-500 dark:text-gray-400">
                           {skill.level}%
                         </span>
                       </div>
                       
                       {/* Progress Bar */}
-                      <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div className="w-full bg-slate-200 dark:bg-gray-700 rounded-full h-2">
                         <div 
                           className={`h-2 rounded-full transition-all duration-1000 delay-${skillIndex * 100} ${getSkillColor(skill.level)}`}
                           style={{
@@ -180,7 +180,7 @@ const Skills = () => {
             </button>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="border border-gray-600 hover:border-blue-400 text-gray-300 hover:text-blue-400 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+              className="border border-slate-600 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400 text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
             >
               Let's Collaborate
             </button>

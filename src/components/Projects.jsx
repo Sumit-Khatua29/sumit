@@ -36,7 +36,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen bg-slate-900 py-24 px-4 relative overflow-hidden">
+    <section id="projects" className="min-h-screen bg-slate-200 dark:bg-slate-900 py-24 px-4 relative overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-500/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -44,14 +44,14 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-20 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 mb-6 shadow-xl shadow-blue-500/10">
-            <Code className="w-5 h-5 text-blue-400" />
-            <span className="text-slate-300 font-medium text-sm tracking-wide">Featured Projects</span>
+          <div className="inline-flex items-center gap-2 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200 dark:border-white/10 mb-6 shadow-xl shadow-blue-500/10">
+            <Code className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <span className="text-slate-600 dark:text-slate-300 font-medium text-sm tracking-wide">Featured Projects</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight font-display">
-            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Work</span>
+          <h2 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight font-display">
+            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Work</span>
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">
             Showcasing innovative solutions and technical expertise across various domains
           </p>
         </div>
@@ -65,15 +65,15 @@ const Projects = () => {
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center gap-4">
                     <div className={`p-3 rounded-2xl bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-100 transition-opacity duration-500`}>
-                      <Code className="w-6 h-6 text-white" />
+                      <Code className="w-6 h-6 text-slate-700 dark:text-white" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                       {project.title}
                     </h3>
                   </div>
                   <a
                     href={project.link}
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300 transform group-hover:rotate-45"
+                    className="flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300 transform group-hover:rotate-45"
                     aria-label={`View ${project.title} project`}
                   >
                     <ArrowUpRight className="w-5 h-5" />
@@ -81,21 +81,21 @@ const Projects = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-slate-400 text-lg leading-relaxed mb-8 font-light">
+                <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8 font-light">
                   {project.description}
                 </p>
 
                 {/* Features */}
                 <div className="mb-8 flex-grow">
-                  <h4 className="flex items-center gap-2 font-semibold text-slate-200 mb-4 text-sm uppercase tracking-wider">
-                    <Zap className="w-4 h-4 text-amber-400" />
+                  <h4 className="flex items-center gap-2 font-semibold text-slate-700 dark:text-slate-200 mb-4 text-sm uppercase tracking-wider">
+                    <Zap className="w-4 h-4 text-amber-500 dark:text-amber-400" />
                     Key Features
                   </h4>
                   <ul className="grid sm:grid-cols-2 gap-3">
                     {project.features.map((feature, featureIndex) => (
                       <li
                         key={featureIndex}
-                        className="flex items-start gap-2 text-slate-400 text-sm"
+                        className="flex items-start gap-2 text-slate-600 dark:text-slate-400 text-sm"
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
                         {feature}
@@ -105,12 +105,12 @@ const Projects = () => {
                 </div>
 
                 {/* Footer: Tech & Date */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t border-white/5">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t border-slate-200 dark:border-white/5">
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-slate-800/50 text-slate-300 rounded-lg text-sm font-medium border border-white/5 hover:bg-slate-700/50 transition-colors"
+                        className="px-3 py-1 bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-300 rounded-lg text-sm font-medium border border-slate-200 dark:border-white/5 hover:bg-slate-200 dark:hover:bg-slate-700/50 transition-colors"
                       >
                         {tech}
                       </span>
@@ -132,11 +132,11 @@ const Projects = () => {
             href="https://github.com/Sumit-Khatua29" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-slate-900 border border-white/10 p-2 pr-6 rounded-full hover:border-white/20 transition-all duration-300 group cursor-pointer shadow-lg hover:-translate-y-1"
+            className="inline-flex items-center gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 p-2 pr-6 rounded-full hover:border-slate-300 dark:hover:border-white/20 transition-all duration-300 group cursor-pointer shadow-lg hover:-translate-y-1"
           >
-            <span className="bg-blue-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">New</span>
-            <span className="text-slate-300 font-medium group-hover:text-white transition-colors">Interested in more? Check my GitHub</span>
-            <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
+            <span className="bg-blue-600/10 dark:bg-blue-600/20 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">New</span>
+            <span className="text-slate-600 dark:text-slate-300 font-medium group-hover:text-slate-900 dark:group-hover:text-white transition-colors">Interested in more? Check my GitHub</span>
+            <ExternalLink className="w-4 h-4 text-slate-400 dark:text-slate-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
           </a>
         </div>
       </div>
