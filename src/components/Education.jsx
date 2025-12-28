@@ -9,7 +9,7 @@ const Education = () => {
       date: '2020 - 2024',
       grade: 'CGPA: 7.29',
       desc: 'Specialized in Computer Science utilizing Python, R, and SQL for data analysis and visualization.',
-      skills: ['Python', 'R', 'SQL', 'Data Analytics'],
+      skills: ['Computer Science', 'Software Engineering'],
       icon: 'college'
     },
     {
