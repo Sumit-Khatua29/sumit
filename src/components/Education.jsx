@@ -39,6 +39,20 @@ const Education = () => {
     return <GraduationCap className="w-6 h-6 text-slate-600 dark:text-white" />;
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="education" className="min-h-screen bg-slate-200 dark:bg-slate-900 py-24 px-4 relative overflow-hidden transition-colors duration-300">
       {/* Subtle Background */}
@@ -146,7 +160,7 @@ const Education = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <button className="group inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 hover:pr-8 shadow-lg shadow-slate-200/50 dark:shadow-none">
+          <button onClick={() => scrollToSection('contact')} className="group inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 hover:pr-8 shadow-lg shadow-slate-200/50 dark:shadow-none">
             Contact Me
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </button>
