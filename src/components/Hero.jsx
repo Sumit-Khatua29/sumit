@@ -103,7 +103,7 @@ const Hero = () => {
               View Projects <ArrowRight size={20} />
             </button>
             <a 
-              href="/SUMIT RESUME.pdf"
+              href="/SUMIT_Resume_NEW.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white/50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 rounded-full font-semibold hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 hover:scale-105 backdrop-blur-sm flex items-center gap-2 hover:text-blue-600 dark:hover:text-white"
