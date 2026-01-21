@@ -116,26 +116,26 @@ const Hero = () => {
         {/* Right Column - Photo */}
         <div className="relative flex justify-center lg:justify-end animate-fade-in-up delay-200 order-1 lg:order-2">
             {/* Value Props Floating Cards */}
-            <div className="absolute top-10 left-0 lg:-left-10 z-20 animate-float" style={{ animationDelay: '0s' }}>
-                <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md p-4 rounded-2xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center gap-3 hover:-translate-y-1 transition-transform cursor-default">
+            <div className="absolute -top-6 -left-6 md:top-10 md:left-0 lg:-left-10 z-20 animate-float" style={{ animationDelay: '0s' }}>
+                <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md p-3 md:p-4 rounded-2xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center gap-3 hover:-translate-y-1 transition-transform cursor-default scale-90 md:scale-100 origin-bottom-right">
                     <div className="p-2 bg-blue-500/10 rounded-lg">
-                        <Code className="w-6 h-6 text-blue-500" />
+                        <Code className="w-5 h-5 md:w-6 md:h-6 text-blue-500" />
                     </div>
                     <div>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Clean Code</p>
-                        <p className="text-sm font-bold text-slate-800 dark:text-white">Architecture</p>
+                        <p className="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 font-medium">Clean Code</p>
+                        <p className="text-xs md:text-sm font-bold text-slate-800 dark:text-white">Architecture</p>
                     </div>
                 </div>
             </div>
 
-            <div className="absolute bottom-10 right-0 lg:-right-4 z-20 animate-float" style={{ animationDelay: '2s' }}>
-                <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md p-4 rounded-2xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center gap-3 hover:-translate-y-1 transition-transform cursor-default">
+            <div className="absolute -bottom-6 -right-6 md:bottom-10 md:right-0 lg:-right-4 z-20 animate-float" style={{ animationDelay: '2s' }}>
+                <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md p-3 md:p-4 rounded-2xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center gap-3 hover:-translate-y-1 transition-transform cursor-default scale-90 md:scale-100 origin-top-left">
                     <div className="p-2 bg-purple-500/10 rounded-lg">
-                        <Sparkles className="w-6 h-6 text-purple-500" />
+                        <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-purple-500" />
                     </div>
                     <div>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Modern UI</p>
-                        <p className="text-sm font-bold text-slate-800 dark:text-white">Experience</p>
+                        <p className="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 font-medium">Modern UI</p>
+                        <p className="text-xs md:text-sm font-bold text-slate-800 dark:text-white">Experience</p>
                     </div>
                 </div>
             </div>
@@ -168,12 +168,12 @@ const Hero = () => {
       </div>
 
       {/* Scroll Down Button */}
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20">
+      <div className="absolute bottom-4 md:bottom-20 left-1/2 transform -translate-x-1/2 z-20">
         <button 
           onClick={() => scrollToSection('about')}
           className="flex flex-col items-center gap-2 text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 group"
         >
-          <span className="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">Scroll Down</span>
+          <span className="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Scroll Down</span>
           <ChevronDown size={32} className="animate-bounce-slow" />
         </button>
       </div>

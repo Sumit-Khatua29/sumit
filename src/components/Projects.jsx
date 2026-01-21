@@ -6,6 +6,20 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Healthcare Microservices Platform',
+      description: 'A scalable, distributed healthcare system built using Microservices architecture. Features secure patient management, appointment scheduling, and doctor portals with inter-service communication.',
+      tech: ['Java', 'Spring Boot', 'Microservices', 'React', 'MySQL', 'Kafka', 'Docker'],
+      features: [
+        'Service Discovery (Eureka)',
+        'API Gateway Implementation',
+        'Centralized Configuration',
+        'Fault Tolerance (Resilience4j)'
+      ],
+      date: 'Nov 2025',
+      link: '#',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
       title: 'YouTube Video Downloader',
       description: 'A modern full-stack web application for downloading YouTube videos with ease. Features a high-performance FastAPI backend using yt-dlp for reliable downloads and a responsive React frontend styled with Bootstrap.',
       tech: ['React', 'FastAPI', 'Python', 'Bootstrap', 'yt-dlp'],
@@ -29,7 +43,7 @@ const Projects = () => {
         'Secure JWT Authentication',
         'Real-time status tracking'
       ],
-      date: 'Aug 2024',
+      date: 'Aug 2025',
       link: '#',
       gradient: 'from-orange-500 to-red-500'
     }
@@ -57,7 +71,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <SpotlightCard key={index} className="hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 transition-all duration-500">
               <div className="p-8 md:p-10 h-full flex flex-col">
