@@ -83,7 +83,7 @@ const Hero = () => {
           </h1>
 
           <div className="text-2xl md:text-3xl text-slate-600 dark:text-slate-300 mb-8 font-light flex items-center gap-3 flex-wrap">
-            <span>I build</span>
+            <span>I am</span>
             <span className="font-semibold text-blue-600 dark:text-blue-400 min-w-[280px]">
               <span className="font-semibold text-blue-600 dark:text-blue-400">{text}</span>
               <span className="animate-pulse text-blue-400 ml-1">|</span>
@@ -165,6 +165,17 @@ const Hero = () => {
         <a href="https://github.com/Sumit-Khatua29" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-blue-400 hover:-translate-y-1 transition-all duration-300"><Github size={20} /></a>
         <a href="https://www.linkedin.com/in/sumit-khatua-b46959216/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-blue-400 hover:-translate-y-1 transition-all duration-300"><Linkedin size={20} /></a>
         <a href="mailto:sumitrkl2002@gmail.com" className="text-slate-400 hover:text-blue-400 hover:-translate-y-1 transition-all duration-300"><Mail size={20} /></a>
+      </div>
+
+      {/* Scroll Down Button */}
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20">
+        <button 
+          onClick={() => scrollToSection('about')}
+          className="flex flex-col items-center gap-2 text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 group"
+        >
+          <span className="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">Scroll Down</span>
+          <ChevronDown size={32} className="animate-bounce-slow" />
+        </button>
       </div>
 
       <style jsx>{`
